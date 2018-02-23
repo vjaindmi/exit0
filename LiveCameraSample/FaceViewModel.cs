@@ -591,4 +591,10 @@ namespace Microsoft.ProjectOxford.Face.Controls
 
         #endregion Properties
     }
+
+    public class UserDetails
+    {
+        public string UserName { get; set; }
+        public string ZoomId { get; set; }
+    }
 }

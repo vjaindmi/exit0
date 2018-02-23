@@ -52,7 +52,7 @@ namespace LiveCameraSample
         /// max concurrent process number for client query.
         /// </summary>
         private int _maxConcurrentProcesses;
-        public Dictionary<string, string> listOfNames = new Dictionary<string, string>();
+        public Dictionary<string, UserDetails> listOfNames = new Dictionary<string, UserDetails>();
 
 
         public enum AppMode
@@ -237,9 +237,12 @@ namespace LiveCameraSample
                                 {
                                     InformationText.Visibility = Visibility.Visible;
                                     InformationText.Text = listOfNames.ContainsKey(identifyResult.FirstOrDefault().Candidates.FirstOrDefault().PersonId.ToString()) ? "Face Identified !! Welcome, " +
-                                    listOfNames[identifyResult.FirstOrDefault().Candidates.FirstOrDefault().PersonId.ToString()] : "";
+                                    listOfNames[identifyResult.FirstOrDefault().Candidates.FirstOrDefault().PersonId.ToString()].UserName : "";
                                 });
+                                await Task.Delay(5000);
 
+                                string target = "https://dminc.zoom.us/j/" + listOfNames[identifyResult.FirstOrDefault().Candidates.FirstOrDefault().PersonId.ToString()].ZoomId ;
+                                System.Diagnostics.Process.Start(target);
                             }
                         }
                         else
@@ -623,7 +626,7 @@ namespace LiveCameraSample
 
                 p.PersonId = (await _faceClient.CreatePersonAsync(GroupName, p.PersonName)).PersonId.ToString();
                 var pName = p.PersonName.Split('-');
-                listOfNames.Add(p.PersonId, pName[1].ToString());
+                listOfNames.Add(p.PersonId, new UserDetails() {UserName = pName[1].ToString(), ZoomId = pName[2].ToString() });
 
                 string img;
                 // Enumerate images under the person folder, call detection
