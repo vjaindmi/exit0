@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 39,
+  "id": "1ecb5808-ff86-4754-9696-ddecc8d31f9c",
+  "activities": [
+    {
+      "id": "66aa7bdf-cb6d-4dcf-a3f3-ab8270fec148",
+      "name": "MLHackathon",
+      "blocks": [
+        {
+          "id": "20f73500-0715-41f8-aecc-74f9ce1d198c",
+          "type": "Database",
+          "arguments": {
+            "preview": false,
+            "databaseType": 0,
+            "server": "dmihackathon.database.windows.net",
+            "trustServer": true,
+            "credentialsType": 0,
+            "credentials": {
+              "userName": "sqladmin",
+              "password": {
+                "id": "dmihackathon.database.windows.net",
+                "secretType": "AzureMLSecret"
+              }
+            },
+            "database": "MLHackathon",
+            "query": "select * from MeetingDetails"
+          }
+        },
+        {
+          "id": "9f77099f-62d0-414f-9777-5bc957902a2b",
+          "type": "Microsoft.DPrep.SampleBlock",
+          "arguments": {
+            "samples": [
+              {
+                "sampleId": "940e66c0-dd84-49f4-95d3-fa18b438cea1",
+                "sampleRevision": "58e50595-d203-40e4-8a58-cd214f4636c5",
+                "sampleName": "Top 10000",
+                "sampleRunner": {
+                  "id": null,
+                  "type": 0
+                },
+                "remoteGeneratorProperties": {},
+                "sampleStrategy": 0,
+                "topArguments": {
+                  "sampleCount": 10000
+                },
+                "randomNArguments": {
+                  "sampleCount": 10000
+                },
+                "randomPercentArguments": {
+                  "probability": 0.1
+                },
+                "allowAutoGen": true,
+                "isDisabled": false
+              }
+            ],
+            "activeSample": "940e66c0-dd84-49f4-95d3-fa18b438cea1"
+          }
+        }
+      ],
+      "inspectors": [
+        {
+          "id": "b0fce34e-b264-4ceb-8e4a-4001aba83c5b",
+          "type": "Microsoft.DPrep.DataQualityInspector",
+          "arguments": {},
+          "reference": {
+            "referenceType": 0,
+            "referenceContainerPath": null,
+            "referencedActivityId": "66aa7bdf-cb6d-4dcf-a3f3-ab8270fec148",
+            "referencedBranchId": null,
+            "referencedStep": {
+              "stepReferenceType": 1,
+              "referencedStepId": null,
+              "fallback": 1
+            },
+            "anonymousSteps": null
+          },
+          "isBackground": false
+        },
+        {
+          "id": "dc7da53d-6033-47c4-b5f6-e442d536050f",
+          "type": "Microsoft.DPrep.DataProfileInspector",
+          "arguments": {},
+          "reference": {
+            "referenceType": 0,
+            "referenceContainerPath": null,
+            "referencedActivityId": "66aa7bdf-cb6d-4dcf-a3f3-ab8270fec148",
+            "referencedBranchId": null,
+            "referencedStep": {
+              "stepReferenceType": 0,
+              "referencedStepId": "9f77099f-62d0-414f-9777-5bc957902a2b",
+              "fallback": 1
+            },
+            "anonymousSteps": null
+          },
+          "isBackground": true
+        }
+      ]
+    }
+  ],
+  "runConfigurations": []
+}

@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 39,
+  "id": "cc83442c-294c-4a95-b3a7-22c79ccec48e",
+  "activities": [
+    {
+      "id": "d30693d3-a047-4292-a0df-13f482c1d3ac",
+      "name": "MeetingDetails",
+      "blocks": [
+        {
+          "id": "b9a8fe88-f835-4ba6-b9a2-5acc6dd75d17",
+          "type": "Microsoft.DPrep.ReferenceActivityBlock",
+          "arguments": {
+            "reference": {
+              "referenceType": 1,
+              "referenceContainerPath": "./MLHackathon.dsource",
+              "referencedActivityId": "66aa7bdf-cb6d-4dcf-a3f3-ab8270fec148",
+              "referencedBranchId": null,
+              "referencedStep": null,
+              "anonymousSteps": null
+            }
+          }
+        },
+        {
+          "id": "d877fda3-581e-4c16-912b-2f216d710dc4",
+          "type": "Microsoft.DPrep.SplitColumnByExampleBlock",
+          "arguments": {
+            "columnId": "JoinTime",
+            "dsl": "PABOAG8AbgB0AGUAcgBtAGkAbgBhAGwATgBvAGQAZQAgAHMAeQBtAGIAbwBsAD0AIgByAGUAZwBpAG8AbgBTAHAAbABpAHQAIgAgAHIAdQBsAGUAPQAiAFMAcABsAGkAdABSAGUAZwBpAG8AbgAiAD4APABWAGEAcgBpAGEAYgBsAGUATgBvAGQAZQAgAHMAeQBtAGIAbwBsAD0AIgB2ACIAIAAvAD4APABOAG8AbgB0AGUAcgBtAGkAbgBhAGwATgBvAGQAZQAgAHMAeQBtAGIAbwBsAD0AIgBzAHAAbABpAHQATQBhAHQAYwBoAGUAcwAiACAAcgB1AGwAZQA9ACIAfgBjAG8AbgB2AGUAcgB0AF8AcwBwAGwAaQB0AE0AYQB0AGMAaABlAHMAXwBtAHUAbAB0AGkAcABsAGUATQBhAHQAYwBoAGUAcwAiAD4APABOAG8AbgB0AGUAcgBtAGkAbgBhAGwATgBvAGQAZQAgAHMAeQBtAGIAbwBsAD0AIgBtAHUAbAB0AGkAcABsAGUATQBhAHQAYwBoAGUAcwAiACAAcgB1AGwAZQA9ACIAfgBjAG8AbgB2AGUAcgB0AF8AbQB1AGwAdABpAHAAbABlAE0AYQB0AGMAaABlAHMAXwBkACIAPgA8AE4AbwBuAHQAZQByAG0AaQBuAGEAbABOAG8AZABlACAAcwB5AG0AYgBvAGwAPQAiAGQAIgAgAHIAdQBsAGUAPQAiAEwAbwBvAGsAQQByAG8AdQBuAGQAIgA+ADwATgBvAG4AdABlAHIAbQBpAG4AYQBsAE4AbwBkAGUAIABzAHkAbQBiAG8AbAA9ACIAcgAiACAAcgB1AGwAZQA9ACIARQBtAHAAdAB5ACIAPgA8AFYAYQByAGkAYQBiAGwAZQBOAG8AZABlACAAcwB5AG0AYgBvAGwAPQAiAHYAIgAgAC8APgA8AC8ATgBvAG4AdABlAHIAbQBpAG4AYQBsAE4AbwBkAGUAPgA8AE4AbwBuAHQAZQByAG0AaQBuAGEAbABOAG8AZABlACAAcwB5AG0AYgBvAGwAPQAiAGMAIgAgAHIAdQBsAGUAPQAiAEMAbwBuAHMAdABTAHQAcgAiAD4APABWAGEAcgBpAGEAYgBsAGUATgBvAGQAZQAgAHMAeQBtAGIAbwBsAD0AIgB2ACIAIAAvAD4APABMAGkAdABlAHIAYQBsAE4AbwBkAGUAIABzAHkAbQBiAG8AbAA9ACIAcwAiAD4APAAhAFsAQwBEAEEAVABBAFsAIgAgACIAXQBdAD4APAAvAEwAaQB0AGUAcgBhAGwATgBvAGQAZQA+ADwALwBOAG8AbgB0AGUAcgBtAGkAbgBhAGwATgBvAGQAZQA+ADwATgBvAG4AdABlAHIAbQBpAG4AYQBsAE4AbwBkAGUAIABzAHkAbQBiAG8AbAA9ACIAcgAiACAAcgB1AGwAZQA9ACIARQBtAHAAdAB5ACIAPgA8AFYAYQByAGkAYQBiAGwAZQBOAG8AZABlACAAcwB5AG0AYgBvAGwAPQAiAHYAIgAgAC8APgA8AC8ATgBvAG4AdABlAHIAbQBpAG4AYQBsAE4AbwBkAGUAPgA8AC8ATgBvAG4AdABlAHIAbQBpAG4AYQBsAE4AbwBkAGUAPgA8AC8ATgBvAG4AdABlAHIAbQBpAG4AYQBsAE4AbwBkAGUAPgA8AC8ATgBvAG4AdABlAHIAbQBpAG4AYQBsAE4AbwBkAGUAPgA8AEwAaQB0AGUAcgBhAGwATgBvAGQAZQAgAHMAeQBtAGIAbwBsAD0AIgBpAGcAbgBvAHIAZQBJAG4AZABlAHgAZQBzACIAPgA8AEEAcgByAGEAeQAgAHMAaQB6AGUAPQAiADAAIgAgAC8APgA8AC8ATABpAHQAZQByAGEAbABOAG8AZABlAD4APABMAGkAdABlAHIAYQBsAE4AbwBkAGUAIABzAHkAbQBiAG8AbAA9ACIAbgB1AG0AUwBwAGwAaQB0AHMAIgA+ADwAIQBbAEMARABBAFQAQQBbADIAXQBdAD4APAAvAEwAaQB0AGUAcgBhAGwATgBvAGQAZQA+ADwATABpAHQAZQByAGEAbABOAG8AZABlACAAcwB5AG0AYgBvAGwAPQAiAGQAZQBsAGkAbQBpAHQAZQByAFMAdABhAHIAdAAiAD4APAAhAFsAQwBEAEEAVABBAFsAZgBhAGwAcwBlAF0AXQA+ADwALwBMAGkAdABlAHIAYQBsAE4AbwBkAGUAPgA8AEwAaQB0AGUAcgBhAGwATgBvAGQAZQAgAHMAeQBtAGIAbwBsAD0AIgBkAGUAbABpAG0AaQB0AGUAcgBFAG4AZAAiAD4APAAhAFsAQwBEAEEAVABBAFsAZgBhAGwAcwBlAF0AXQA+ADwALwBMAGkAdABlAHIAYQBsAE4AbwBkAGUAPgA8AEwAaQB0AGUAcgBhAGwATgBvAGQAZQAgAHMAeQBtAGIAbwBsAD0AIgBpAG4AYwBsAHUAZABlAEQAZQBsAGkAbQBpAHQAZQByAHMAIgA+ADwAIQBbAEMARABBAFQAQQBbAGYAYQBsAHMAZQBdAF0APgA8AC8ATABpAHQAZQByAGEAbABOAG8AZABlAD4APABMAGkAdABlAHIAYQBsAE4AbwBkAGUAIABzAHkAbQBiAG8AbAA9ACIAZgBpAGwAbABTAHQAcgBhAHQAZQBnAHkAIgA+ADwAIQBbAEMARABBAFQAQQBbAE4AdQBsAGwAXQBdAD4APAAvAEwAaQB0AGUAcgBhAGwATgBvAGQAZQA+ADwALwBOAG8AbgB0AGUAcgBtAGkAbgBhAGwATgBvAGQAZQA+AA==",
+            "examples": "null",
+            "newColumnsBaseName": "JoinTime_",
+            "keepDelimiter": false,
+            "fillStrategy": 0
+          }
+        },
+        {
+          "id": "24387cc9-d9f0-46de-b9cb-396010237188",
+          "type": "Microsoft.DPrep.SplitColumnByExampleBlock",
+          "arguments": {
+            "columnId": "EndTime",
+            "dsl": "PABOAG8AbgB0AGUAcgBtAGkAbgBhAGwATgBvAGQAZQAgAHMAeQBtAGIAbwBsAD0AIgByAGUAZwBpAG8AbgBTAHAAbABpAHQAIgAgAHIAdQBsAGUAPQAiAFMAcABsAGkAdABSAGUAZwBpAG8AbgAiAD4APABWAGEAcgBpAGEAYgBsAGUATgBvAGQAZQAgAHMAeQBtAGIAbwBsAD0AIgB2ACIAIAAvAD4APABOAG8AbgB0AGUAcgBtAGkAbgBhAGwATgBvAGQAZQAgAHMAeQBtAGIAbwBsAD0AIgBzAHAAbABpAHQATQBhAHQAYwBoAGUAcwAiACAAcgB1AGwAZQA9ACIAfgBjAG8AbgB2AGUAcgB0AF8AcwBwAGwAaQB0AE0AYQB0AGMAaABlAHMAXwBtAHUAbAB0AGkAcABsAGUATQBhAHQAYwBoAGUAcwAiAD4APABOAG8AbgB0AGUAcgBtAGkAbgBhAGwATgBvAGQAZQAgAHMAeQBtAGIAbwBsAD0AIgBtAHUAbAB0AGkAcABsAGUATQBhAHQAYwBoAGUAcwAiACAAcgB1AGwAZQA9ACIAfgBjAG8AbgB2AGUAcgB0AF8AbQB1AGwAdABpAHAAbABlAE0AYQB0AGMAaABlAHMAXwBkACIAPgA8AE4AbwBuAHQAZQByAG0AaQBuAGEAbABOAG8AZABlACAAcwB5AG0AYgBvAGwAPQAiAGQAIgAgAHIAdQBsAGUAPQAiAEwAbwBvAGsAQQByAG8AdQBuAGQAIgA+ADwATgBvAG4AdABlAHIAbQBpAG4AYQBsAE4AbwBkAGUAIABzAHkAbQBiAG8AbAA9ACIAcgAiACAAcgB1AGwAZQA9ACIARQBtAHAAdAB5ACIAPgA8AFYAYQByAGkAYQBiAGwAZQBOAG8AZABlACAAcwB5AG0AYgBvAGwAPQAiAHYAIgAgAC8APgA8AC8ATgBvAG4AdABlAHIAbQBpAG4AYQBsAE4AbwBkAGUAPgA8AE4AbwBuAHQAZQByAG0AaQBuAGEAbABOAG8AZABlACAAcwB5AG0AYgBvAGwAPQAiAGMAIgAgAHIAdQBsAGUAPQAiAEMAbwBuAHMAdABTAHQAcgAiAD4APABWAGEAcgBpAGEAYgBsAGUATgBvAGQAZQAgAHMAeQBtAGIAbwBsAD0AIgB2ACIAIAAvAD4APABMAGkAdABlAHIAYQBsAE4AbwBkAGUAIABzAHkAbQBiAG8AbAA9ACIAcwAiAD4APAAhAFsAQwBEAEEAVABBAFsAIgAgACIAXQBdAD4APAAvAEwAaQB0AGUAcgBhAGwATgBvAGQAZQA+ADwALwBOAG8AbgB0AGUAcgBtAGkAbgBhAGwATgBvAGQAZQA+ADwATgBvAG4AdABlAHIAbQBpAG4AYQBsAE4AbwBkAGUAIABzAHkAbQBiAG8AbAA9ACIAcgAiACAAcgB1AGwAZQA9ACIARQBtAHAAdAB5ACIAPgA8AFYAYQByAGkAYQBiAGwAZQBOAG8AZABlACAAcwB5AG0AYgBvAGwAPQAiAHYAIgAgAC8APgA8AC8ATgBvAG4AdABlAHIAbQBpAG4AYQBsAE4AbwBkAGUAPgA8AC8ATgBvAG4AdABlAHIAbQBpAG4AYQBsAE4AbwBkAGUAPgA8AC8ATgBvAG4AdABlAHIAbQBpAG4AYQBsAE4AbwBkAGUAPgA8AC8ATgBvAG4AdABlAHIAbQBpAG4AYQBsAE4AbwBkAGUAPgA8AEwAaQB0AGUAcgBhAGwATgBvAGQAZQAgAHMAeQBtAGIAbwBsAD0AIgBpAGcAbgBvAHIAZQBJAG4AZABlAHgAZQBzACIAPgA8AEEAcgByAGEAeQAgAHMAaQB6AGUAPQAiADAAIgAgAC8APgA8AC8ATABpAHQAZQByAGEAbABOAG8AZABlAD4APABMAGkAdABlAHIAYQBsAE4AbwBkAGUAIABzAHkAbQBiAG8AbAA9ACIAbgB1AG0AUwBwAGwAaQB0AHMAIgA+ADwAIQBbAEMARABBAFQAQQBbADIAXQBdAD4APAAvAEwAaQB0AGUAcgBhAGwATgBvAGQAZQA+ADwATABpAHQAZQByAGEAbABOAG8AZABlACAAcwB5AG0AYgBvAGwAPQAiAGQAZQBsAGkAbQBpAHQAZQByAFMAdABhAHIAdAAiAD4APAAhAFsAQwBEAEEAVABBAFsAZgBhAGwAcwBlAF0AXQA+ADwALwBMAGkAdABlAHIAYQBsAE4AbwBkAGUAPgA8AEwAaQB0AGUAcgBhAGwATgBvAGQAZQAgAHMAeQBtAGIAbwBsAD0AIgBkAGUAbABpAG0AaQB0AGUAcgBFAG4AZAAiAD4APAAhAFsAQwBEAEEAVABBAFsAZgBhAGwAcwBlAF0AXQA+ADwALwBMAGkAdABlAHIAYQBsAE4AbwBkAGUAPgA8AEwAaQB0AGUAcgBhAGwATgBvAGQAZQAgAHMAeQBtAGIAbwBsAD0AIgBpAG4AYwBsAHUAZABlAEQAZQBsAGkAbQBpAHQAZQByAHMAIgA+ADwAIQBbAEMARABBAFQAQQBbAGYAYQBsAHMAZQBdAF0APgA8AC8ATABpAHQAZQByAGEAbABOAG8AZABlAD4APABMAGkAdABlAHIAYQBsAE4AbwBkAGUAIABzAHkAbQBiAG8AbAA9ACIAZgBpAGwAbABTAHQAcgBhAHQAZQBnAHkAIgA+ADwAIQBbAEMARABBAFQAQQBbAE4AdQBsAGwAXQBdAD4APAAvAEwAaQB0AGUAcgBhAGwATgBvAGQAZQA+ADwALwBOAG8AbgB0AGUAcgBtAGkAbgBhAGwATgBvAGQAZQA+AA==",
+            "examples": "null",
+            "newColumnsBaseName": "EndTime_",
+            "keepDelimiter": false,
+            "fillStrategy": 0
+          }
+        },
+        {
+          "id": "f1f1accd-7ab8-41ec-b1b6-662c6365ae3b",
+          "type": "Microsoft.DPrep.DeriveColumnByExample",
+          "arguments": {
+            "columnId": "LoggedTime",
+            "dsl": "",
+            "examples": "{}",
+            "priorColumnIds": [
+              "EndTime_2"
+            ],
+            "sourceColumnIds": [],
+            "outputType": 2,
+            "anchorColumnId": "EndTime_2"
+          }
+        },
+        {
+          "id": "26ec83ee-7230-423b-9d25-2b46c4c0dffd",
+          "type": "Microsoft.DPrep.AddCustomColumnBlock",
+          "arguments": {
+            "columnId": "TotalLoggedTime",
+            "priorColumnId": "LoggedTime",
+            "customExpression": "math.log(row.EndTime_2 - row.JoinTime_2)",
+            "codeBlockType": 0
+          }
+        },
+        {
+          "id": "fcf35379-a0ad-483e-84a9-b653304bbaf0",
+          "type": "Microsoft.DPrep.DeleteColumnBlock",
+          "arguments": {
+            "columnIds": [
+              "LoggedTime"
+            ]
+          }
+        },
+        {
+          "id": "8788d6a9-a29e-4cc7-8b77-797035ec81c4",
+          "type": "Microsoft.DPrep.AddCustomColumnBlock",
+          "arguments": {
+            "columnId": "LoggedTime",
+            "priorColumnId": "TotalLoggedTime",
+            "customExpression": "datetime.log(row.EndTime_2 - row.JoinTime_2)",
+            "codeBlockType": 0
+          }
+        },
+        {
+          "id": "962c891d-952c-43d1-8efb-89ee727858d0",
+          "type": "Microsoft.DPrep.DeleteColumnBlock",
+          "arguments": {
+            "columnIds": [
+              "LoggedTime"
+            ]
+          }
+        },
+        {
+          "id": "266caf47-4151-4230-a815-18c340a6f7e7",
+          "type": "Microsoft.DPrep.DeleteColumnBlock",
+          "arguments": {
+            "columnIds": [
+              "TotalLoggedTime"
+            ]
+          }
+        }
+      ],
+      "inspectors": [
+        {
+          "id": "341ff329-8687-4ff7-b8e5-d187c0bea74c",
+          "type": "Microsoft.DPrep.DataQualityInspector",
+          "arguments": {},
+          "reference": {
+            "referenceType": 0,
+            "referenceContainerPath": null,
+            "referencedActivityId": "d30693d3-a047-4292-a0df-13f482c1d3ac",
+            "referencedBranchId": null,
+            "referencedStep": {
+              "stepReferenceType": 1,
+              "referencedStepId": null,
+              "fallback": 1
+            },
+            "anonymousSteps": null
+          },
+          "isBackground": false
+        }
+      ]
+    },
+    {
+      "id": "f5d65aa5-1b47-426f-b7d3-4cfacbb0cb7d",
+      "name": "UserEstimations",
+      "blocks": [
+        {
+          "id": "abefb5a0-e0e9-452a-a5fc-fcf66180548f",
+          "type": "Microsoft.DPrep.ReferenceActivityBlock",
+          "arguments": {
+            "reference": {
+              "referenceType": 1,
+              "referenceContainerPath": "./MLHackathon-1.dsource",
+              "referencedActivityId": "e10037b4-5b0b-432f-8621-62e3b0611004",
+              "referencedBranchId": null,
+              "referencedStep": null,
+              "anonymousSteps": null
+            }
+          }
+        },
+        {
+          "id": "c7c2b7ec-c247-4e77-9dd0-d144b56581d3",
+          "type": "Microsoft.DPrep.WriteToCsvBlock",
+          "arguments": {
+            "path": {
+              "target": 0,
+              "resourceDetails": [
+                {
+                  "path": "./MeetingData"
+                }
+              ]
+            },
+            "eol": 0,
+            "na": "NA",
+            "error": "ERROR",
+            "separator": ","
+          }
+        }
+      ],
+      "inspectors": [
+        {
+          "id": "e9eb70f3-3d90-4db3-8d53-6fdeb4ae3b91",
+          "type": "Microsoft.DPrep.DataQualityInspector",
+          "arguments": {},
+          "reference": {
+            "referenceType": 0,
+            "referenceContainerPath": null,
+            "referencedActivityId": "f5d65aa5-1b47-426f-b7d3-4cfacbb0cb7d",
+            "referencedBranchId": null,
+            "referencedStep": {
+              "stepReferenceType": 1,
+              "referencedStepId": null,
+              "fallback": 1
+            },
+            "anonymousSteps": null
+          },
+          "isBackground": false
+        }
+      ]
+    }
+  ],
+  "runConfigurations": []
+}
