@@ -9,11 +9,3 @@
 *.dll.config
 *.cache
 *.suo
-*.obj
-*.cache
-*.lref
-.vs/
-packages/
-LiveCameraSample/
-BasicConsoleSample/
-VideoFrameAnalyzer/
