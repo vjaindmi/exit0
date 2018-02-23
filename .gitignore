@@ -9,3 +9,6 @@
 *.dll.config
 *.cache
 *.suo
+bin/
+obj/
+Debug/
