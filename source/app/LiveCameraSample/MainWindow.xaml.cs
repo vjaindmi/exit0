@@ -101,6 +101,9 @@ namespace LiveCameraSample
         public MainWindow()
         {
             InitializeComponent();
+            Uri iconUri = new Uri(@"D:\Hackathon_Live_Project\exit0\source\app\Logo.png", UriKind.RelativeOrAbsolute);
+
+            this.Icon = BitmapFrame.Create(iconUri);
 
             // Create grabber. 
             _grabber = new FrameGrabber<LiveCameraResult>();
@@ -667,7 +670,7 @@ namespace LiveCameraSample
             }
 
             int invalidImageCount = 0;
-            foreach (var dir in System.IO.Directory.EnumerateDirectories(@"C:\New folder\Cognitive-Samples-VideoFrameAnalysis-master\Windows\source\app\LiveCameraSample\Data\PersonGroup\"))
+            foreach (var dir in System.IO.Directory.EnumerateDirectories(@"D:\Hackathon_Live_Project\exit0\source\app\LiveCameraSample\Data\PersonGroup"))
             {
                 var tasks = new List<Task>();
                 var tag = System.IO.Path.GetFileName(dir);

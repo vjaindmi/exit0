@@ -51,3 +51,30 @@ C:\New folder\Cognitive-Samples-VideoFrameAnalysis-master\Windows\source\app\Vid
 C:\New folder\Cognitive-Samples-VideoFrameAnalysis-master\Windows\source\app\VideoFrameAnalyzer\obj\Debug\VideoFrameAnalyzer.csproj.CoreCompileInputs.cache
 C:\New folder\Cognitive-Samples-VideoFrameAnalysis-master\Windows\source\app\VideoFrameAnalyzer\obj\Debug\VideoFrameAnalyzer.dll
 C:\New folder\Cognitive-Samples-VideoFrameAnalysis-master\Windows\source\app\VideoFrameAnalyzer\obj\Debug\VideoFrameAnalyzer.pdb
+D:\Hackathon_Live_Project\exit0\source\app\VideoFrameAnalyzer\bin\Debug\dll\x86\OpenCvSharpExtern.dll
+D:\Hackathon_Live_Project\exit0\source\app\VideoFrameAnalyzer\bin\Debug\dll\x86\msvcp120.dll
+D:\Hackathon_Live_Project\exit0\source\app\VideoFrameAnalyzer\bin\Debug\dll\x86\msvcr120.dll
+D:\Hackathon_Live_Project\exit0\source\app\VideoFrameAnalyzer\bin\Debug\dll\x86\opencv_world310.dll
+D:\Hackathon_Live_Project\exit0\source\app\VideoFrameAnalyzer\bin\Debug\dll\x86\opencv_ffmpeg310.dll
+D:\Hackathon_Live_Project\exit0\source\app\VideoFrameAnalyzer\bin\Debug\dll\x64\OpenCvSharpExtern.dll
+D:\Hackathon_Live_Project\exit0\source\app\VideoFrameAnalyzer\bin\Debug\dll\x64\msvcp120.dll
+D:\Hackathon_Live_Project\exit0\source\app\VideoFrameAnalyzer\bin\Debug\dll\x64\msvcr120.dll
+D:\Hackathon_Live_Project\exit0\source\app\VideoFrameAnalyzer\bin\Debug\dll\x64\opencv_world310.dll
+D:\Hackathon_Live_Project\exit0\source\app\VideoFrameAnalyzer\bin\Debug\dll\x64\opencv_ffmpeg310_64.dll
+D:\Hackathon_Live_Project\exit0\source\app\VideoFrameAnalyzer\bin\Debug\VideoFrameAnalyzer.dll
+D:\Hackathon_Live_Project\exit0\source\app\VideoFrameAnalyzer\bin\Debug\VideoFrameAnalyzer.pdb
+D:\Hackathon_Live_Project\exit0\source\app\VideoFrameAnalyzer\bin\Debug\Newtonsoft.Json.dll
+D:\Hackathon_Live_Project\exit0\source\app\VideoFrameAnalyzer\bin\Debug\OpenCvSharp.Blob.dll
+D:\Hackathon_Live_Project\exit0\source\app\VideoFrameAnalyzer\bin\Debug\OpenCvSharp.dll
+D:\Hackathon_Live_Project\exit0\source\app\VideoFrameAnalyzer\bin\Debug\OpenCvSharp.Extensions.dll
+D:\Hackathon_Live_Project\exit0\source\app\VideoFrameAnalyzer\bin\Debug\OpenCvSharp.UserInterface.dll
+D:\Hackathon_Live_Project\exit0\source\app\VideoFrameAnalyzer\bin\Debug\Newtonsoft.Json.xml
+D:\Hackathon_Live_Project\exit0\source\app\VideoFrameAnalyzer\bin\Debug\OpenCvSharp.xml
+D:\Hackathon_Live_Project\exit0\source\app\VideoFrameAnalyzer\bin\Debug\OpenCvSharp.dll.config
+D:\Hackathon_Live_Project\exit0\source\app\VideoFrameAnalyzer\bin\Debug\OpenCvSharp.Blob.xml
+D:\Hackathon_Live_Project\exit0\source\app\VideoFrameAnalyzer\bin\Debug\OpenCvSharp.Blob.dll.config
+D:\Hackathon_Live_Project\exit0\source\app\VideoFrameAnalyzer\bin\Debug\OpenCvSharp.Extensions.xml
+D:\Hackathon_Live_Project\exit0\source\app\VideoFrameAnalyzer\obj\Debug\VideoFrameAnalyzer.csprojResolveAssemblyReference.cache
+D:\Hackathon_Live_Project\exit0\source\app\VideoFrameAnalyzer\obj\Debug\VideoFrameAnalyzer.csproj.CoreCompileInputs.cache
+D:\Hackathon_Live_Project\exit0\source\app\VideoFrameAnalyzer\obj\Debug\VideoFrameAnalyzer.dll
+D:\Hackathon_Live_Project\exit0\source\app\VideoFrameAnalyzer\obj\Debug\VideoFrameAnalyzer.pdb

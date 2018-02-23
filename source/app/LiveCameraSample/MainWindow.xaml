@@ -5,34 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LiveCameraSample"
         mc:Ignorable="d"
-        Title="LiveCameraSample" Height="550" Width="725">
+        Title="Auspex" Height="600" Width="750">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="311*"/>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="300*"/>
             <ColumnDefinition Width="406*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="35" />
+            <RowDefinition Height="40" />
             <RowDefinition Height="*" />
-            <RowDefinition Height="35" />
+            <RowDefinition Height="40" />
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal" Grid.Row="0" Name="ButtonBar" Grid.ColumnSpan="2">
-            <ComboBox Visibility="Collapsed" x:Name="CameraList" Width="100" Margin="5,5,0,5" Loaded="CameraList_Loaded" />
-            <Button Content="Start Camera" Background="FloralWhite" Foreground="Gray" Height="30" Width="150" BorderBrush="AliceBlue" Padding="5,0" Margin="5,5,0,5" Click="StartButton_Click" />
-            <Button Content="Stop Camera" Background="FloralWhite" Foreground="Gray" Height="30" Width="150" BorderBrush="AliceBlue" Padding="5,0" Margin="5,5,0,5" Click="StopButton_Click" />
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Name="ButtonBar" Grid.ColumnSpan="3">
+            <ComboBox Visibility="Collapsed" x:Name="CameraList" Width="100" Margin="5,5,0,0" Loaded="CameraList_Loaded" />
+            <Button Content="Start Camera" Background="#CE353D" Foreground="White" Height="35" Width="160" BorderBrush="AliceBlue" Padding="5,0" Margin="5,5,0,0" Click="StartButton_Click" />
+            <Button Content="Stop Camera"  Background="#CE353D" Foreground="White" Height="35" Width="160" BorderBrush="AliceBlue" Padding="5,0" Margin="5,5,0,0" Click="StopButton_Click" />
             <TextBlock VerticalAlignment="Center" Visibility="Collapsed" Margin="15,5,0,5" Text="Mode:" />
             <ComboBox x:Name="ModeList" Visibility="Collapsed" Width="100" Margin="5,5,0,5" Loaded="ModeList_Loaded" SelectionChanged="ModeList_SelectionChanged" />
         </StackPanel>
-        <Button Content="Show/Hide Settings" Background="FloralWhite" Foreground="Gray" Height="30" Width="150" BorderBrush="AliceBlue" Padding="5,0" Margin="0,5,5,5" Click="SettingsButton_Click" HorizontalAlignment="Right" Grid.Column="1" />
-        <Grid Grid.Row="1" Grid.ColumnSpan="2">
+        <Button Content="Show/Hide Settings" Background="#CE353D" Foreground="White" Height="35" Width="180" BorderBrush="AliceBlue" Padding="5,0" Margin="0,5,5,0" Click="SettingsButton_Click" HorizontalAlignment="Right" Grid.Column="2" />
+        <Grid Grid.Row="1" Grid.ColumnSpan="3">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="50*" />
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="53*" />
             </Grid.ColumnDefinitions>
-            <Image x:Name="LeftImage" Grid.Column="0" Margin="5,5,0,5" HorizontalAlignment="Left" Width="348" />
-            <Image x:Name="RightImage" Grid.Column="1" Margin="5" Panel.ZIndex="1" />
+            <Image x:Name="LeftImage" Grid.Column="0" Margin="5,5,18,0" Grid.ColumnSpan="2" />
+            <Image x:Name="RightImage" Grid.Column="2" Margin="5" Panel.ZIndex="1" />
 
-            <StackPanel Visibility="{Binding Source={StaticResource Settings}, Path=Default.SettingsPanelVisibility, Mode=TwoWay}" Grid.Column="1" Panel.ZIndex="2" Name="SettingsPanel" Background="FloralWhite" VerticalAlignment="Top" Margin="5">
+            <StackPanel Visibility="{Binding Source={StaticResource Settings}, Path=Default.SettingsPanelVisibility, Mode=TwoWay}" Grid.Column="2" Panel.ZIndex="2" Name="SettingsPanel" Background="#F3F2EF" VerticalAlignment="Top" Margin="5,5,5,0">
                 <TextBlock Margin="5" Grid.Row="0" FontWeight="Bold" Text="Settings"/>
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -73,10 +75,10 @@
                     <Run Text="Vision API calls made = "/><Run Text="{Binding Source={StaticResource Settings}, Path=Default.VisionAPICallCount}"/>
                 </TextBlock>
                 <CheckBox Margin="5" IsChecked="{Binding Source={StaticResource Settings}, Path=Default.AutoStopEnabled}" ContentStringFormat="Automatically stop after {0}" Content="{Binding Source={StaticResource Settings}, Path=Default.AutoStopTime}" />
-                <Button Background="FloralWhite" Foreground="Gray" Margin="5" Content="Save" Click="SaveSettingsButton_Click" />
+                <Button Background="#CE353D" Height="30" Foreground="White" Margin="5" Content="Save" Click="SaveSettingsButton_Click" />
             </StackPanel>
         </Grid>
-        <TextBlock x:Name="InformationText" Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="50" FontWeight="DemiBold" Visibility="Collapsed" Text="Project Auspex" Grid.ColumnSpan="2" Grid.Row="1"></TextBlock>
-        <TextBlock Name="MessageArea" Margin="5,10,5,9" Grid.Row="2" VerticalAlignment="Center" Grid.ColumnSpan="2" />
+        <TextBlock x:Name="InformationText" Foreground="Gray"  TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="50" FontWeight="DemiBold" Visibility="Collapsed" Text="Auspex" Grid.Row="1" Grid.Column="1" Margin="10,205,5,217" Grid.ColumnSpan="2" />
+        <TextBlock Name="MessageArea" Margin="5,10,5,9" Grid.Row="2" VerticalAlignment="Center" Grid.ColumnSpan="3" />
     </Grid>
 </Window>
