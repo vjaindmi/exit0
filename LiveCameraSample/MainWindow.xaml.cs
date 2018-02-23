@@ -54,6 +54,8 @@ namespace LiveCameraSample
         /// max concurrent process number for client query.
         /// </summary>
         private int _maxConcurrentProcesses;
+        public Dictionary<string, string> listOfNames = new Dictionary<string, string>();
+
 
         public enum AppMode
         {
@@ -198,51 +200,48 @@ namespace LiveCameraSample
             // Submit image to API. 
             var attrs = new List<FaceAttributeType> { FaceAttributeType.Age,
                 FaceAttributeType.Gender, FaceAttributeType.HeadPose };
-
-            Face[] faces = new Face[] { };
             try
             {
-                faces = await _faceClient.DetectAsync(jpg, returnFaceAttributes: attrs);
-                Guid[] guids = faces.Select(ff => ff.FaceId).ToArray();
+                Face[] faces = await _faceClient.DetectAsync(jpg, returnFaceAttributes: attrs);
                 if (faces.Any())
                 {
-                    IdentifyResult[] identifyResult = await _faceClient.IdentifyAsync(GroupName, guids);
-                    MessageArea.Text = identifyResult.FirstOrDefault().FaceId.ToString();
-                    //await Task.Delay(4000);
-                    //for (int idx = 0; idx < faces.Length; idx++)
-                    //{
-                    //    // Update identification result for rendering
-                    //    var face = TargetFaces[idx];
-                    //    var res = identifyResult[idx];
-                    //    if (res.Candidates.Length > 0 && Persons.Any(p => p.PersonId == res.Candidates[0].PersonId.ToString()))
-                    //    {
-                    //        face.PersonName = Persons.Where(p => p.PersonId == res.Candidates[0].PersonId.ToString()).First().PersonName;
-                    //    }
-                    //    else
-                    //    {
-                    //        face.PersonName = "Unknown";
-                    //    }
-                    //}
+                    _grabber.StopProcessingAsync();
+                    Guid[] guids = faces.Select(ff => ff.FaceId).ToArray();
+                    IdentifyResult[] identifyResult = new IdentifyResult[] { };
 
-                    var outString = new StringBuilder();
-                    foreach (var face in TargetFaces)
+                    await Task.Delay(2000);
+                    identifyResult = await _faceClient.IdentifyAsync(GroupName, guids);
+                    if (identifyResult.Any())
                     {
-                        outString.AppendFormat("Face {0} is identified as {1}. ", face.FaceId, face.PersonName);
+                        if (identifyResult.FirstOrDefault().Candidates.FirstOrDefault() != null)
+                        {
+                            if (identifyResult.FirstOrDefault().Candidates.FirstOrDefault().Confidence >= 0.5)
+                            {
+                                this.Dispatcher.Invoke(() =>
+                                {
+                                    MessageArea.Text = listOfNames.ContainsKey(identifyResult.FirstOrDefault().Candidates.FirstOrDefault().PersonId.ToString()) ?
+                                    listOfNames[identifyResult.FirstOrDefault().Candidates.FirstOrDefault().PersonId.ToString()] : "";
+                                });
+                            }
+                        }
                     }
                 }
-                //await _grabber.StopProcessingAsync();
-                //Face Identification
+
+                var outString = new StringBuilder();
+                foreach (var face in TargetFaces)
+                {
+                    outString.AppendFormat("Face {0} is identified as {1}. ", face.FaceId, face.PersonName);
+                }
 
                 return new LiveCameraResult { Faces = faces };
             }
             catch (Exception ex)
             {
-                //await _grabber.StopProcessingAsync();
                 return null;
             }
             finally
             {
-                await _grabber.StopProcessingAsync();
+                _grabber.StopProcessingAsync();
             }
         }
 
@@ -589,6 +588,8 @@ namespace LiveCameraSample
                 p.Faces = faces;
 
                 p.PersonId = (await _faceClient.CreatePersonAsync(GroupName, p.PersonName)).PersonId.ToString();
+                var pName = p.PersonName.Split('-');
+                listOfNames.Add(p.PersonId, pName[1].ToString());
 
                 string img;
                 // Enumerate images under the person folder, call detection

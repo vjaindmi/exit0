@@ -157,15 +157,21 @@
     <Content Include="Data\haarcascade_frontalface_alt2.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Resource Include="Data\PersonGroup\DMI-Nandini\PicsArt_07-11-11.32.14.jpg" />
-    <Resource Include="Data\PersonGroup\DMI-Nandini\PicsArt_07-22-12.58.58.jpg" />
-    <Resource Include="Data\PersonGroup\DMI-Nandini\PicsArt_11-01-01.47.02.jpg" />
+    <Resource Include="Data\PersonGroup\DMI-Nandini-2988753850\PicsArt_07-11-11.32.14.jpg" />
+    <Resource Include="Data\PersonGroup\DMI-Nandini-2988753850\PicsArt_07-22-12.58.58.jpg" />
+    <Resource Include="Data\PersonGroup\DMI-Nandini-2988753850\PicsArt_11-01-01.47.02.jpg" />
+    <Resource Include="Data\PersonGroup\DMI-Nitish-9924399309\Person1-Nitish1.jpg" />
+    <Resource Include="Data\PersonGroup\DMI-Nitish-9924399309\Person1-Nitish2.jpg" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VideoFrameAnalyzer\VideoFrameAnalyzer.csproj">
       <Project>{bec7da78-c953-4a72-924f-2749d1f9f18b}</Project>
       <Name>VideoFrameAnalyzer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\PersonGroup\DMI-AbhinavAgarwal-6485496441\" />
+    <Folder Include="Data\PersonGroup\DMI-AbhinavMudgal-TEST\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
